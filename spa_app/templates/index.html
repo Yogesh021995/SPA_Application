@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SPA Application</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Sign In</h1>
+        <form id="signin-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="mobile">Mobile:</label>
+            <input type="text" id="mobile" name="mobile" required><br><br>
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" required></textarea><br><br>
+            <button type="submit">Sign In</button>
+        </form>
+        <h1>Whom to Visit?</h1>
+        <form id="visitor-details-form">
+            <label for="staff-member">Enter Name:</label>
+            <input type="text" id="staff-member" name="staff_member" required>
+            <ul id="staff-member-list"></ul>
+            <label for="reason">Reason:</label>
+            <textarea id="reason" name="reason" required></textarea><br><br>
+            <button type="submit">Confirm</button>
+        </form>
+        <h1>Ask for Drinks</h1>
+        <form id="drink-request-form">
+            <label for="drink">Select Drink:</label>
+            <select id="drink" name="drink"></select><br><br>
+            <button type="submit">Request Drink</button>
+        </form>
+        <div id="thank-you-screen" class="hidden">
+            <h1>Thanks for Visiting Us</h1>
+            <p>Representative: <span id="representative-name"></span></p>
+            <p>Selected Drink/Snack: <span id="selected-drink"></span></p>
+        </div>
+    </div>
+    <script src="{% static 'main.js' %}"></script>
+</body>
+</html>
